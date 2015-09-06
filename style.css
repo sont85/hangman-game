@@ -1,0 +1,29 @@
+canvas {
+  border: dashed 2px #333;
+}
+body {
+  background: linear-gradient(to bottom right, #1C9C75, #95db93);
+}
+#title,
+#lives,
+.h2 {
+  font-family: cursive;
+  color: #151266;
+  padding-bottom: 8px;
+}
+.letter {
+  font-size: 1.7em;
+}
+.hidden {
+  display: none;
+}
+.correct {
+  background-color: green;
+}
+.blink {
+  background-color: black;
+}
+.zIndex {
+  z-index: 2;
+  position: fixed;
+}
