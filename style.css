@@ -1,18 +1,28 @@
 canvas {
   border: dashed 2px #333;
+  width: 100%;
 }
 body {
-  background: linear-gradient(to bottom right, #1C9C75, #95db93);
+  background: #1C9C75;
+  color:white;
 }
-#title,
-#lives,
-.h2 {
-  font-family: cursive;
-  color: #151266;
-  padding-bottom: 8px;
+#title {
+  letter-spacing: 3px;
+  font-size: 40px;
+  margin-bottom: 30px
 }
 .letter {
   font-size: 1.7em;
+}
+.letterButton {
+  width: 35px;
+  padding: 10px;
+}
+.scoreboard {
+  border: 2px solid #444;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 .hidden {
   display: none;

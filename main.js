@@ -48,7 +48,7 @@ require(['word'], function(words) {
 	}
 
 	function displayData() {
-		var livesMessage = "You Have "+lives+" Lives Left";
+		var livesMessage = lives+" Lives Left";
 		if (lives >= 0) {
 			$("#lives").html(livesMessage);
 		}
@@ -132,7 +132,7 @@ require(['word'], function(words) {
 		canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
 		$("#winner").addClass("hidden");
 		$("#loser").addClass("hidden");
-		$("#lives").html("You Have 10 Lives");
+		$("#lives").html("10 Lives Left");
 		$("#letterPickedDiv").html("");
 		$("#LetterWrongDiv").html("");
 		$("#hint").html("click show hint");

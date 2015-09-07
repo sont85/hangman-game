@@ -1,5 +1,6 @@
 <!Doctype html>
 <html>
+
 <head>
   <title>Hangman</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel='stylesheet' href='./style.css'></link>
 </head>
+
 <body>
   <div class="container">
     <div class="navbar navbar-default">
@@ -18,7 +20,6 @@
       <a href="https://github.com/sont85"><i class="fa fa-github fa-2x navbar-brand hidden-xs" title="Github"></i></a>
       <a href="https://www.linkedin.com/pub/son-truong/b8/888/427"><i class="fa fa-linkedin-square fa-2x navbar-brand hidden-xs" title="LinkedIn"></i></a>
       <a href="https://twitter.com/Fade_2_bliss"><i class="fa fa-twitter fa-2x navbar-brand hidden-xs" title="Twitter"></i></a>
-
       <!-- collapsable navbar -->
       <div class="collapse navbar-collapse">
         <div class="navbar-right" id="navbar-spy">
@@ -40,17 +41,57 @@
             </li>
           </ul>
         </div>
-      </div> <!-- end of collapse -->
-    </div> <!-- end of navbar -->
+      </div>
+      <!-- end of collapse -->
+    </div>
+    <!-- end of navbar -->
     <div>
-      <h1 class="page-header text-center" id="title">Hangman</h1>
+      <h1 class="text-center" id="title">Hangman</h1>
     </div>
     <div>
       <h3 id="winner" class="hidden text-center">You Won
-      <h3 id="loser" class="hidden text-center">You Lost</h3>
+        <h3 id="loser" class="hidden text-center">You Lost</h3>
     </div>
     <div clas="row ">
       <div class="col-sm-6">
+        <div class='scoreboard'>
+        <div class="zIndex hidden hidden-xs" id="winnerImage">
+          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSdiIOGlQYKJzGH-4ypDAxiKyHVSh6U9f8cDeMGm2zaBVeZfNhs" class="block-center">
+        </div>
+        <ul class="list-unstyled">
+          <li>
+            <h2 id="lives">10 Lives Left</h2>
+          </li>
+          <li>
+            <span class="h2">Categories: </span>
+            <span class="lead" id="category"></span>
+          </li>
+          <li>
+            <span class="h2">Hints: </span>
+            <span class="lead" id="hint">click show hint</span>
+          </li>
+          <li>
+            <span class="h2">Chosen: </span>
+            <span class="lead" id="letterPickedDiv"></span>
+          </li>
+          <li>
+            <span class="h2">Wrong: </span>
+            <span class="lead" id="LetterWrongDiv"></span>
+          </li>
+        </ul>
+        <div>
+          <button id="playAgain" class="btn btn-success btn-lg">*Play Again</button>
+          <button id="hintButton" class="btn btn-info btn-lg">*Show Hint</button>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-6">
+        <canvas id="canvas"></canvas>
+        <div class="lead" id="wordDiv"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class='col-xs-12'>
         <ul>
           <button class="letterButton btn btn-default">A</button>
           <button class="letterButton btn btn-default">B</button>
@@ -79,44 +120,6 @@
           <button class="letterButton btn btn-default">Y</button>
           <button class="letterButton btn btn-default">Z</button>
         </ul>
-        <!--  Letter placeholder -->
-        <div class="text-center lead" id="wordDiv"></div>
-      </div>
-      <div class="col-sm-6">
-        <canvas id="canvas"></canvas>
-        <div>
-          <button id="playAgain" class="btn btn-success btn-lg">*Play Again</button>
-          <button id="hintButton" class="btn btn-info btn-lg">*Show Hint</button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <div class="zIndex hidden hidden-xs" id="winnerImage">
-            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSdiIOGlQYKJzGH-4ypDAxiKyHVSh6U9f8cDeMGm2zaBVeZfNhs" class="block-center">
-          </div>
-          <ul class="list-unstyled">
-            <li>
-              <h1 id="lives">You Have 10 Lives</h1>
-            </li>
-            <li>
-              <span class="h2">Categories: </span>
-              <span class="lead" id="category"></span>
-            </li>
-            <li>
-              <span class="h2">Hints: </span>
-              <span class="lead" id="hint">click show hint</span>
-            </li>
-            <li>
-              <span class="h2">Picked Letters: </span>
-              <span class="lead" id="letterPickedDiv"></span>
-            </li>
-            <li>
-              <span class="h2">Wrong Letters: </span>
-              <span class="lead" id="LetterWrongDiv"></span>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -128,4 +131,5 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
   <script data-main='main' src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.20/require.min.js"></script>
 </body>
+
 </html>
